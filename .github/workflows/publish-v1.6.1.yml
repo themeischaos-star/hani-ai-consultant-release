@@ -1,4 +1,4 @@
-name: Publish public v1.6.1 release
+name: Refresh public v1.6.1 release notes
 
 on:
   push:
@@ -9,38 +9,18 @@ permissions:
   contents: write
 
 jobs:
-  publish:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - name: Check out public documentation
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
 
-      - name: Download public-only release assets
-        env:
-          TRANSFER_URL: "https://sdmntprnznorth.oaiusercontent.com/files/00000000-d734-820b-be27-5c11821644f2/raw?se=2026-09-02T05%3A07%3A09Z&sp=r&sv=2026-02-06&sr=b&scid=01a0607a-7563-7199-b405-34c375e816eb&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-02T01%3A55%3A18Z&ske=2026-09-03T01%3A55%3A18Z&sks=b&skv=2026-02-06&sig=YXPisAfeRnrYQZ3EK3F4JpN8VVJiAGI/fJwqs9Ub2Dk%3D"
-        run: |
-          curl --fail --location --retry 3 "$TRANSFER_URL" --output transfer.zip
-          mkdir -p public-assets
-          unzip -q transfer.zip -d public-assets
-          cp releases/v1.6.1.md public-assets/RELEASE-NOTES-v1.6.1.md
-          find public-assets -maxdepth 1 -type f -printf '%f\n' | sort
-
-      - name: Verify executable checksum
-        working-directory: public-assets
-        run: sha256sum --check SHA256SUMS-v1.6.1.txt
-
-      - name: Create annotated tag
-        run: |
-          git config user.name "themeischaos-star"
-          git config user.email "themeischaos@gmail.com"
-          git tag -a v1.6.1 -m "한의원 AI 경영컨설턴트 v1.6.1"
-          git push origin v1.6.1
-
-      - name: Create GitHub Release
+      - name: Refresh release body and release-note asset
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create v1.6.1             public-assets/hani-ai-consultant-v1.6.1.exe             public-assets/SHA256SUMS-v1.6.1.txt             public-assets/user_guide-v1.6.1.pdf             public-assets/RELEASE-NOTES-v1.6.1.md             --repo ${{ github.repository }}             --title "한의원 AI 경영컨설턴트 v1.6.1"             --notes-file releases/v1.6.1.md             --verify-tag
+          cp releases/v1.6.1.md RELEASE-NOTES-v1.6.1.md
+          gh release edit v1.6.1             --repo ${{ github.repository }}             --title "한의원 AI 경영컨설턴트 v1.6.1"             --notes-file releases/v1.6.1.md
+          gh release upload v1.6.1 RELEASE-NOTES-v1.6.1.md             --repo ${{ github.repository }}             --clobber
