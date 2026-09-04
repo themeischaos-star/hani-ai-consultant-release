@@ -1,5 +1,22 @@
 # 변경사항
 
+## v1.7.1 - 2026-09-04
+
+### Business Time Machine
+
+- 월 평균 대비 총매출을 색상으로 보여주는 경영 캘린더 Heat Map
+- 날짜 선택 시 KPI, Dashboard 상태, Health Score, Timeline, 경영일지, 개선과제 복원
+- 전일, 직전 동일요일, 최근 4주 동일요일 평균, 전월·전년 동일요일 자동 비교
+- 작년 같은 주와 전년 동월을 포함한 사용자 선택형 비교 설정
+- 비교 결과 한 줄 브리핑, Dashboard 자동 비교, Data Coach 부족 구간 안내
+- 월간·분기·연간 비교가 포함된 월간 실행 리뷰
+
+### 호환성과 배포
+
+- Database 스키마 3 유지, 기존 데이터 마이그레이션 불필요
+- 기존 OCR·Excel·PDF·Clipboard·Dashboard·Timeline 기능 유지
+- Windows EXE smoke test 및 Microsoft Defender 검사 통과
+
 ## v1.6.1 - 2026-09-02
 
 ### 경영 분석

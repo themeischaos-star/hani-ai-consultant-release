@@ -1,8 +1,8 @@
-# 한의원 AI 경영컨설턴트 v1.6.1 사용설명서
+# 한의원 AI 경영컨설턴트 v1.7.1 사용설명서
 
 ## 1. 설치
 
-1. Public Repository의 최신 Release에서 `hani-ai-consultant-v1.6.1.exe`를 내려받습니다.
+1. Public Repository의 최신 Release에서 `hani-ai-consultant-v1.7.1.exe`를 내려받습니다.
 2. README에 표시된 SHA-256과 다운로드 파일의 값을 비교합니다.
 3. 별도의 설치 과정 없이 EXE를 실행합니다.
 4. SmartScreen 경고가 나오면 공식 파일과 SHA-256을 확인한 경우에만 `추가 정보 → 실행`을 선택합니다.
@@ -10,13 +10,13 @@
 PowerShell에서 SHA-256을 확인하려면 다음 명령을 사용합니다.
 
 ```powershell
-Get-FileHash .\hani-ai-consultant-v1.6.1.exe -Algorithm SHA256
+Get-FileHash .\hani-ai-consultant-v1.7.1.exe -Algorithm SHA256
 ```
 
 정상 SHA-256:
 
 ```text
-5d6149f55d4068aac756f6e817c7df4c81fadd6a6a33132628c6ba7c253e2b00
+bb5b468ad433e48ec0e44ad12cab3a7a6c41837e76ba5edb05f9891cb9948e1c
 ```
 
 ## 2. 최초 실행
@@ -64,6 +64,8 @@ OCR는 입력을 돕는 기능입니다. 최종 기준 데이터는 사용자가
 자료가 적어도 현재 데이터로 분석할 수 있지만 신뢰도와 Data Readiness를 함께 확인해야 합니다. 예측값은 확정 실적이 아닙니다.
 
 ## 6. AI 분석
+
+`경영 캘린더`에서는 날짜별 색상으로 평균 이상·평균·평균 이하를 확인할 수 있습니다. 날짜를 선택하면 당시 KPI, Health Score, Timeline, 경영일지와 개선과제 상태가 함께 나타납니다. 전일·직전 동일요일·최근 4주 동일요일 평균·전월·전년 비교는 자동 계산되며, `자동 비교 설정`에서 기준을 추가하거나 제외할 수 있습니다.
 
 OpenAI API Key는 필요하지 않습니다. `AI 분석` 또는 `AI에게 질문`을 선택하면 프로그램이 Database 계산값, Timeline과 경영일지를 Markdown으로 정리해 Clipboard에 복사하고 ChatGPT를 엽니다.
 
