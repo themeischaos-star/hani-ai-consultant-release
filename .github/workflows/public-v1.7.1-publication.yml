@@ -1,0 +1,43 @@
+name: Publish v1.7.1 download release
+
+on:
+  push:
+    branches:
+      - release/v1.7.1-publication
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download source-free approved assets
+        env:
+          TRANSFER_URL: "https://sdmntprnznorth.oaiusercontent.com/files/00000000-d89c-820b-8690-093684c9e100/raw?se=2026-09-04T14%3A03%3A21Z&sp=r&sv=2026-02-06&sr=b&scid=01a06c8b-702e-77d6-a608-eb33c604fd13&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T07%3A54%3A33Z&ske=2026-09-05T07%3A54%3A33Z&sks=b&skv=2026-02-06&sig=Xi3nLi4cvfLBwfoiJQBk7%2B%2BQckrpNMpMdQ86s5%2B2OsY%3D"
+        run: |
+          curl --fail --location "$TRANSFER_URL" --output transfer.zip
+          mkdir transfer
+          unzip -q transfer.zip -d transfer
+
+      - name: Verify executable checksum
+        working-directory: transfer
+        run: sha256sum --check SHA256SUMS-v1.7.1.txt
+
+      - name: Create annotated tag and public release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a v1.7.1 -m "v1.7.1 Business Time Machine Update"
+          git push origin v1.7.1
+          gh release create v1.7.1 \
+            transfer/hani-ai-consultant-v1.7.1.exe \
+            transfer/SHA256SUMS-v1.7.1.txt \
+            transfer/user_guide-v1.7.1.pdf \
+            releases/v1.7.1.md \
+            --title "v1.7.1 Business Time Machine Update" \
+            --notes-file releases/v1.7.1.md
