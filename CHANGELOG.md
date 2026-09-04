@@ -1,3 +1,13 @@
+# 변경 기록
+
+## v2.0 - Medical Intelligence OS
+
+- Dashboard 중심 6개 작업공간 UI
+- 현재 확보된 KPI만 나타나는 카드와 Optional Intelligence
+- 통합 자료 입력, Reports, Data Center, Settings
+- 1366·1600·1920·2560 Windows UI 검증
+- DB 스키마 3과 기존 OCR·분석·기록·보고서 기능 유지
+
 # 변경사항
 
 ## v1.7.1 - 2026-09-04

@@ -6,19 +6,25 @@
 
 모든 경영 데이터는 사용자의 컴퓨터에만 저장됩니다. 개발자는 매출, 환자 수, OCR 결과, PDF, Excel 등 어떠한 사용자 데이터도 수집하거나 확인하지 않습니다.
 
+## v2.0 Medical Intelligence OS
+
+실행하면 Dashboard에서 오늘의 병원 상태, AI Daily Brief, 오늘의 미션, Health Score와 현재 확보된 KPI를 먼저 보여 줍니다. 왼쪽의 Dashboard, Analysis, Business Calendar, Reports, Data Center, Settings만 따라가면 되며 기존 OCR·Excel·PDF·Clipboard·Timeline·경영일지·Calendar·보고서 기능은 그대로 유지됩니다.
+
+자료가 적어도 현재 범위로 분석을 먼저 완료합니다. 재진율·삼진율·연령·유입·예약·LTV는 자료가 있을 때만 화면이 자동 확장되며, 추가 자료는 선택사항입니다.
+
 ## 최신 버전 다운로드
 
-### v1.7.1 - 2026-09-04
+### v2.0 - 2026-09-04
 
-[![Windows EXE 다운로드](https://img.shields.io/badge/Windows_EXE-v1.7.1-0A66C2?style=for-the-badge&logo=windows)](https://github.com/themeischaos-star/hani-ai-consultant-release/releases/download/v1.7.1/hani-ai-consultant-v1.7.1.exe)
+[![Windows EXE 다운로드](https://img.shields.io/badge/Windows_EXE-v2.0-0A66C2?style=for-the-badge&logo=windows)](https://github.com/themeischaos-star/hani-ai-consultant-release/releases/download/v2.0/hani-ai-consultant-v2.0.exe)
 
-- 파일: `hani-ai-consultant-v1.7.1.exe`
+- 파일: `hani-ai-consultant-v2.0.exe`
 - 운영체제: Windows 10/11 64-bit
 - 설치: 별도 설치 없이 EXE 실행
-- SHA-256: `bb5b468ad433e48ec0e44ad12cab3a7a6c41837e76ba5edb05f9891cb9948e1c`
-- [Release Notes](https://github.com/themeischaos-star/hani-ai-consultant-release/releases/tag/v1.7.1)
+- SHA-256: `4c903b0b261e42bcd5f4f2d7ba7beca5808113a1823c55ed850fc1aec9b7ff8f`
+- [Release Notes](https://github.com/themeischaos-star/hani-ai-consultant-release/releases/tag/v2.0)
 - [상세 사용설명서](docs/USER_GUIDE.md)
-- [사용설명서 PDF](https://github.com/themeischaos-star/hani-ai-consultant-release/releases/download/v1.7.1/user_guide-v1.7.1.pdf)
+- [사용설명서 PDF](https://github.com/themeischaos-star/hani-ai-consultant-release/releases/download/v2.0/user_guide-v2.0.pdf)
 
 > 다운로드한 EXE의 SHA-256이 위 값과 일치하는지 확인해 주세요. 값이 다르면 실행하지 마세요.
 
@@ -36,7 +42,7 @@
 
 ## 백신 프로그램 안내
 
-일부 백신은 새로 배포된 실행파일을 기본적으로 검사하거나 차단할 수 있습니다. v1.7.1 배포본은 Microsoft Defender 검사에서 `위협 없음`을 확인한 뒤 배포됐습니다.
+일부 백신은 새로 배포된 실행파일을 기본적으로 검사하거나 차단할 수 있습니다. v2.0 배포본은 Microsoft Defender 검사에서 `위협 없음`을 확인한 뒤 배포됐습니다.
 
 실행이 차단되면 먼저 공식 Release와 SHA-256을 확인하고, 사용하는 백신의 검사 결과를 확인하세요. 검증이 끝난 공식 파일에 한해서만 해당 백신의 예외 등록 기능을 사용할 수 있습니다.
 

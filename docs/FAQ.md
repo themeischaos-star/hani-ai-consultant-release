@@ -43,3 +43,12 @@ OCR 검수 표에서 숫자를 직접 수정하고 저장하면 수정값이 Dat
 ## 프로그램은 무료인가요?
 
 현재 Public Release는 무료로 다운로드할 수 있습니다. ChatGPT를 사용할 경우 사용자가 이용 중인 ChatGPT 요금제의 정책이 적용되며 별도의 OpenAI API 비용은 없습니다.
+
+
+## 자료가 적으면 분석이 중단되나요?
+
+아닙니다. 현재 확보된 Core KPI만으로 분석을 먼저 완료합니다. 더 깊은 분석에 쓸 자료는 선택사항으로만 한 번 안내됩니다.
+
+## 메뉴가 이전과 달라졌나요?
+
+v2.0은 기능을 삭제하지 않고 Dashboard·Analysis·Business Calendar·Reports·Data Center·Settings로 정리했습니다. 기존 고급 기능은 상단 메뉴에서도 계속 사용할 수 있습니다.

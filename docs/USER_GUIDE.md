@@ -1,8 +1,8 @@
-# 한의원 AI 경영컨설턴트 v1.7.1 사용설명서
+# 한의원 AI 경영컨설턴트 v2.0 사용설명서
 
 ## 1. 설치
 
-1. Public Repository의 최신 Release에서 `hani-ai-consultant-v1.7.1.exe`를 내려받습니다.
+1. Public Repository의 최신 Release에서 `hani-ai-consultant-v2.0.exe`를 내려받습니다.
 2. README에 표시된 SHA-256과 다운로드 파일의 값을 비교합니다.
 3. 별도의 설치 과정 없이 EXE를 실행합니다.
 4. SmartScreen 경고가 나오면 공식 파일과 SHA-256을 확인한 경우에만 `추가 정보 → 실행`을 선택합니다.
@@ -10,7 +10,7 @@
 PowerShell에서 SHA-256을 확인하려면 다음 명령을 사용합니다.
 
 ```powershell
-Get-FileHash .\hani-ai-consultant-v1.7.1.exe -Algorithm SHA256
+Get-FileHash .\hani-ai-consultant-v2.0.exe -Algorithm SHA256
 ```
 
 정상 SHA-256:
