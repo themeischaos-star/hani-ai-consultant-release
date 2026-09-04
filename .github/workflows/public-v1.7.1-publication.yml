@@ -16,7 +16,7 @@ jobs:
 
       - name: Download source-free approved assets
         env:
-          TRANSFER_URL: "https://sdmntprnznorth.oaiusercontent.com/files/00000000-d89c-820b-8690-093684c9e100/raw?se=2026-09-04T14%3A03%3A21Z&sp=r&sv=2026-02-06&sr=b&scid=01a06c8b-702e-77d6-a608-eb33c604fd13&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T07%3A54%3A33Z&ske=2026-09-05T07%3A54%3A33Z&sks=b&skv=2026-02-06&sig=Xi3nLi4cvfLBwfoiJQBk7%2B%2BQckrpNMpMdQ86s5%2B2OsY%3D"
+          TRANSFER_URL: "https://sdmntprnznorth.oaiusercontent.com/files/00000000-ee60-820b-9ac7-aff3e80812ca/raw?se=2026-09-04T14%3A09%3A46Z&sp=r&sv=2026-02-06&sr=b&scid=01a06c8b-702e-77d6-a608-eb33c604fd13&skoid=f5e14fda-2af7-44a3-9d18-d372ffcad871&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T03%3A01%3A46Z&ske=2026-09-05T03%3A01%3A46Z&sks=b&skv=2026-02-06&sig=fX/To%2BBDOTLOrhVFb/Kz4kO6u/kywuyk4kBz3NU6Jdw%3D"
         run: |
           curl --fail --location "$TRANSFER_URL" --output transfer.zip
           mkdir transfer
